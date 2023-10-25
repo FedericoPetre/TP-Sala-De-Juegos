@@ -1,0 +1,51 @@
+<div class="mayormenor-container">
+  <div class="container">
+    <div *ngIf="gameOver; else elseBlock">
+      <!-- Contenido a mostrar si la condición es verdadera -->
+      <h1 class="row titulo-mayormenor">{{ textGameOver }}</h1>
+    </div>
+    <ng-template #elseBlock>
+      <!-- Contenido a mostrar si la condición es falsa -->
+      <h1 class="row titulo-mayormenor">MAYOR MENOR</h1>
+    </ng-template>
+    <div class="row">
+      <div class="col">
+       <!-- <h2 class="juego-terminado" *ngIf="gameOver">{{ textGameOver }}</h2>-->
+      </div>      
+      <div class="col">
+        <h2 class="puntuacion">Puntaje: {{ score }}</h2><br>
+      </div>
+      <div class="col">
+        <h2 class="intentos">Intentos: {{ attempts }}/10</h2>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col text-center d-flex justify-content-center align-items-center flex-column">
+        <img class="carta-izquierda" src="{{ cardImage }}" alt="" />
+        <button *ngIf="activeGame" class="btn-mayor mt-3"
+        (click)="playMayorMenor('menor')">Menor</button>
+      </div>
+      <div class="col text-center d-flex justify-content-center align-items-center flex-column">
+        <img class="carta-derecha" src="../../../../assets/img/mayor-menor/reverso.jpg" alt="" />
+        <button *ngIf="activeGame" class="btn-mayor mt-3"
+        (click)="playMayorMenor('mayor')">Mayor</button>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col" *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+  <!-- <app-chat></app-chat> -->
+</div>

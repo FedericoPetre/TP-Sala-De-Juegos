@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.Pantalla
+{
+    background-image: url("../../../assets/img/fondo-chat.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 93%;
+    min-width: 100vw;
+    padding-top: 2%;
+}
+
+.tablita{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  /* margin: 0 auto; */
+}
+
+ .tablet {
+    max-height: 350px;
+    overflow-y: auto; 
+    border-collapse: collapse;
+    margin: 0 auto;
+    border-radius: 30px;
+    opacity: 0.95;
+    box-shadow: 0 0 16px #ff2d38;
+} 
+
+.boton{
+    min-height: 6vh;
+    min-width: 3vw;
+    background-color: #ff0364;
+    border-radius: 20px;
+    color: azure;
+    box-shadow: 0 0 16px #ff2d38;
+
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: flex;
+    justify-items: center;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #FF8040;
+    margin-bottom: .5%;
+    font-weight: 200;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 5px 5px 5px white;
+}
+
+td{
+    background-color: #00988d;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: medium;
+}
+
+table{
+    max-height: 70%;
+    overflow: scroll;
+}
+
+.btn {
+    text-align: center;
+    background-color: white;
+    width: 16vw;
+    padding: 10px;
+    margin:5px;
+}
+
+.btn:hover {
+    background-color: orange;
+    cursor:pointer;
+}
+
+.encabezado1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nombreJuego{
+    font-family: 'Permanent Marker', cursive;
+    font-size: x-large;
+}

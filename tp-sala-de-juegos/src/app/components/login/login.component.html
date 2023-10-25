@@ -1,0 +1,21 @@
+<div class="wrapper">
+	<div class="container">
+		<h1>Bienvenido</h1>
+		<form class="form">
+			<input type="text" placeholder="E-mail" [(ngModel)]="email" name="email">
+			<input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password">
+			<button type="submit" id="login-button" class="btnLogin" (click)="Ingresar()">Ingresar</button>
+		</form>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <br><br>
+                <button type="submit" class="btnLogin" (click)="cargarDatosAdmin()">Administrador</button><br><br>
+                <button type="submit" class="btnLogin" (click)="cargarDatosUsuario()">Usuario</button><br><br>
+                <button type="submit" class="btnLogin" (click)="cargarDatosInvitado()">Invitado</button>
+            </div>
+            <div class="col"></div>
+        </div>
+	</div>
+</div>

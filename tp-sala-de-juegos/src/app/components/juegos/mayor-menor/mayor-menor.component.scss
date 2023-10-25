@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.mayormenor-container {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../../../../assets/img/fondo-chat.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 93%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .titulo-mayormenor {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: flex;
+    justify-items: center;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #FF8040;
+    margin-bottom: .5%;
+    font-weight: 200;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 5px 5px 5px white;
+  }
+  
+  .puntuacion, .intentos, .juego-terminado {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: auto;
+    border-radius: 12px;
+    background-color:#00988d;
+    margin-bottom: .5%;
+    font-weight: 150;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 5px 5px 5px white;
+  }
+  
+  .row {
+    margin: 1rem auto;
+  }
+  
+  .carta-izquierda {
+    width: 15rem;
+    margin-right: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #6528e0;
+  }
+  
+  .carta-derecha {
+    width: 15rem;
+    border-radius: 15px;
+    margin-left: 15px;
+    box-shadow: 0 0 20px #6528e0;
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .carta-izquierda {
+      width: 9rem;
+    }
+    .carta-derecha {
+      width: 9rem;
+    }
+  }
+  
+  .btn-menor {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #6528e0;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-right: 9rem;
+  }
+  
+  .btn-menor:hover {
+    background-color: rgba(197, 3, 250, 0.8);
+    box-shadow: 0px 15px 20px #6528e0;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    transform: translateY(-7px);
+  }
+  
+  .btn-menor:active {
+    transform: translateY(-2px);
+  }
+  
+  .btn-mayor {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: #ff056f;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .btn-mayor:hover {
+    background-color: rgba(197, 3, 250, 0.8);
+    box-shadow: 0px 15px 20px #ff056f;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    transform: translateY(-7px);
+  }
+  
+  .btn-mayor:active {
+    transform: translateY(-2px);
+  }
+  
+  .btn-comenzar-reiniciar {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(197, 3, 250, 0.8);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  .btn-comenzar-reiniciar:hover {
+    background-color: #6716c4;
+    box-shadow: 0px 15px 20px rgba(245, 2, 253, 0.4);
+    color: rgb(255, 255, 255);
+    transform: translateY(-7px);
+  }
+  
+  .btn-comenzar-reiniciar {
+    transform: translateY(-1px);
+  }

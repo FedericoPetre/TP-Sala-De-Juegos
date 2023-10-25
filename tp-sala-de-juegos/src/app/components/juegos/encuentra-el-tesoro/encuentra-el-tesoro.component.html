@@ -1,0 +1,21 @@
+<div class="justify-content-center Pantalla" >
+    <div class="container-fluid" >
+        <div class="row justify-content-center">
+            <h1>Encuentra el Tesoro</h1>
+        </div><br>
+        <div class="row justify-content-center">
+            <h2>Intentos: {{intentos}}</h2>
+            <h2>Puntaje: {{puntaje}}</h2>
+        </div>
+        <div class="row justify-content-center tablero">
+            <div class="col-2" *ngFor="let item of arrayTesoro">
+              <button class="carta btn" [id]="item.id" (click)="destapar(item.id)" ><img [src]="dorsoFoto" alt=""></button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div *ngIf="flagTerminoElJuego">
+                <button class="botonesJugar" (click)="volverAJugar()">Volver a Juegar</button>
+            </div>
+        </div>         
+    </div>
+</div>

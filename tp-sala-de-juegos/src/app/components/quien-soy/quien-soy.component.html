@@ -1,0 +1,22 @@
+<div class="Pantalla" >
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-start" >
+        <img class="imagen-de-perfil" [src]="srcImagen" alt="imagen de Federico Petre">
+        <h1>{{informacionCompleta.nombre}}</h1>
+        <h2>federicopetre22@gmail.com</h2>
+        <h3>Juego: Encuentra el Tesoro</h3>
+        <h4>Objetivo del Juego: Encuentra el tesoro oculto entre 10 cartas</h4>
+        <div class="cartasYPuntajes">
+            <h4>Tipos de cartas y puntajes</h4>
+            <table>
+                <tr><img class="imagenJuego" src="../../../assets/img/encuentra-el-tesoro/barco-pirata.png" alt="barco pirata">El barco: Suma 1 punto.</tr>
+                <tr><img class="imagenJuego" src="../../../assets/img/encuentra-el-tesoro/mapa-del-tesoro.png" alt="mapa">El mapa: Suma 2 puntos.</tr>
+                <tr><img class="imagenJuego" src="../../../assets/img/encuentra-el-tesoro/tesoro.png" alt="tesoro">El tesoro: Suma 10 puntos.</tr>
+                <tr><img class="imagenJuego" src="../../../assets/img/encuentra-el-tesoro/calavera.png" alt="calavera">La calavera: Finaliza el juego (Perdiste)</tr>
+            </table>
+        </div>
+        <p>El juego finaliza cuando se encuentra el tesoro o cuando se descubre la calavera.</p>
+        <p>Al principio del juego todas las cartas están al reverso. Se hace click en la carta para revelarla</p>
+        <p>El puntaje máximo que se puede alcanzar es de 20 puntos</p>
+    </div>
+</div>
+    

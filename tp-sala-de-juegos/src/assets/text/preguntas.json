@@ -1,0 +1,11 @@
+[
+    {
+        "categoria":"Harry Potter",
+        "pregunta":"¿Cuál es el nombre completo del personaje en la imagen?",
+        "respuesta":"Harry James Potter",
+        "incorrecta1":"Harry Albus Potter",
+        "incorrecta2":"Harry Severus Potter",
+        "incorrecta3":"Harry Sirius Potter",
+        "imagen":"https://ik.imagekit.io/hpapi/harry.jpg"
+    }    
+]

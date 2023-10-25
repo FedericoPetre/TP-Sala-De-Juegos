@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+
+* {
+    transition: all 0.3s;
+}
+
+.wrapper {
+    position: absolute;
+    justify-items: center;
+	display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;/* Mueve el contenido hacia arriba */
+    height: 93%; /* Usar el 100% de la altura de la ventana */
+    width: 100%;
+    background-image: url("../../../../assets/img/preguntados/preguntados.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    font-size: 120%;
+}
+
+.container-fluid {
+	width: 100%;
+	margin: 0 auto;
+	padding: 80px 0;
+	height: 100%;
+	text-align: center;
+}
+
+.encabezado {
+    background-color: white;
+    min-width: 300px;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: left;
+}
+
+.categoria{
+    opacity: 0.3;
+    justify-content: left;
+}
+
+.pregunta{
+    text-align: center;
+}
+
+.imagen{
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    background-color: slategray;
+}
+
+.btn {
+    text-align: center;
+    background-color: white;
+    width: 55vw;
+    padding: 10px;
+    margin:5px;
+}
+
+.btn:hover {
+    background-color: orange;
+    cursor:pointer;
+}
+
+.encabezado1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.Puntaje, .Intentos {
+    width: 50%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: flex;
+    justify-items: center;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #FF8040;
+    margin-bottom: .5%;
+    font-weight: 200;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 5px 5px 5px white;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: auto;
+    border-radius: 12px;
+    background-color:#00988d;
+    margin-bottom: .5%;
+    font-weight: 150;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 5px 5px 5px white;
+    
+}
+
+.encabezado1 h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

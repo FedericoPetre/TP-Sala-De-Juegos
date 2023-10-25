@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center Pantalla">
+    <div class="card text-center contenedor-carta view-from-right">
+        <div class="card-header" style="margin-bottom: 10px;">Chat Sala de Juegos</div>
+        <div class="barra">
+          <div *ngFor="let mensajeItem of arrayMensajes" class="mensajes">
+            <div class="chatPersonal" *ngIf="firebase.email == mensajeItem.email">
+              <p class="fechaYo">{{mensajeItem.fecha}}</p>
+              <p class="nombreYo">Tú : {{mensajeItem.mensaje}}</p>
+            </div>
+            <div class="chatInvitado" *ngIf="firebase.email != mensajeItem.email">
+              <p class="fecha">{{mensajeItem.fecha}}</p>
+              <p class="nombreInvitado">{{mensajeItem.nombre}} : {{mensajeItem.mensaje}}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-center" style="margin-left: 15%; margin-right: 15%;">
+            <input class="IngresoTexto form-control" type="text" [(ngModel)]="mensajeNuevo" placeholder="Escriba su mensaje aquí..." >
+            <button class="btn btn-dark BtnEnviar" (click)="EnviarMensaje()" >
+              <i class="bi bi-arrow-right-circle"></i>
+            </button>
+        </div>
+    </div>
+</div>
