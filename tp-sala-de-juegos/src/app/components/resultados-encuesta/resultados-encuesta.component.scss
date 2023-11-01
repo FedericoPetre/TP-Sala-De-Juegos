@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+.Pantalla
+{
+    background-image: url("../../../assets/img/fondo-chat.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 93%;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form{
+    background-image: url("../../../assets/img/mesaDeJuegos.webp"); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 85vh; /* Establece una altura máxima del 80% del alto de la ventana */
+    overflow-y: auto;
+    border-radius: 10px;
+    border:1px solid #00988d;
+    box-shadow: 10px 10px 10px white;
+    max-height: 80vh;
+   
+}
+
+.columns-container {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 100%;
+}
+
+.left-column, .right-column {
+    width: 50%;
+}
+
+.form-label{
+    margin-top:20px;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: large;
+    background-color: skyblue;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+small {
+    font-family: 'Nunito', sans-serif;
+    font-size: small;
+    background-color:white;
+    border-radius: 10px;
+}
+
+input{
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+    color:black;
+}
+
+.form-check-label{
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    background-color:darkblue;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+td {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: flex;
+    justify-items: center;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #FF8040;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: 200;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 5px 5px 5px white;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    margin-left: 2px;
+}
+
+.respuestaEncuesta {
+    border-radius: 50px;
+    border: 3px solid black;
+    box-shadow: 10px 10px 10px white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+p{
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+    color:black;
+    border-radius: 10px;
+    padding: 4px 4px 4px 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+button {
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px white;
+    background-color: skyblue;
+    text-align: center;
+    margin: 2px auto; /* Centra el botón horizontalmente */
+    margin-bottom: 20px;
+}

@@ -1,0 +1,56 @@
+<div class="Pantalla">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-start">
+      <h1>Respuestas Encuesta</h1>
+      <form>
+        <table>
+            <tr *ngFor="let respuesta of arrayRespuestas" class="respuestaEncuesta">
+            <!-- Contenido de la columna izquierda -->
+            <td class="left-column">
+              <div>
+                  <label class="form-label">Nombre</label>
+                  <input type="text" class="form-control" readonly [value]="respuesta.nombre">
+                </div>
+          
+                <div>
+                  <label class="form-label">Apellido</label>
+                  <input type="text" class="form-control" readonly [value]="respuesta.apellido">
+                </div>
+          
+                <div>
+                  <label class="form-label">Edad</label>
+                  <input type="number" class="form-control" readonly [value]="respuesta.edad">
+                </div>
+          
+                <div>
+                  <label class="form-label">Teléfono</label>
+                  <input type="text" class="form-control" readonly [value]="respuesta.telefono">
+                </div>
+                <div>
+                    <label class="form-label">¿Hubo algo de la app que te resultó difícil de usar o entender?</label>
+                    <p readonly>{{respuesta.loMasDificilDeLaApp}}</p><br>
+                </div>
+            </td>
+        
+            <!-- Contenido de la columna derecha -->
+            <td class="right-column">
+
+              <div>
+                <label class="form-label">¿Qué juego te gustó más?</label>
+                <input type="text" class="form-control" readonly [value]="respuesta.juegoQueMasGusto">
+              </div>
+                
+                <div>
+                    <label class="form-label">¿Hay algún juego que te gustaría que mejoremos o agreguemos?</label>
+                    <p readonly>{{respuesta.juegoAgregarOMejorar}}</p>
+                </div>
+      
+              <div>
+                  <label class="form-label">¿Como calificarías la app?<img *ngFor="let estrella of respuesta.estrellas" [src]="estrella.foto" alt=""></label>
+
+                </div>
+            </td>
+        </tr>
+        </table><br>
+    </form>
+    </div>
+</div>

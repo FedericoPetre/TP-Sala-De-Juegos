@@ -5,7 +5,7 @@ import { ToastrModule } from 'ngx-toastr'; // Importa ToastrModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -22,6 +22,8 @@ import { PreguntadosComponent } from './components/juegos/preguntados/preguntado
 import { HttpClientModule } from '@angular/common/http';
 import { ResultadosJuegosComponent } from './components/resultados-juegos/resultados-juegos.component';
 import { EncuentraElTesoroComponent } from './components/juegos/encuentra-el-tesoro/encuentra-el-tesoro.component';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { ResultadosEncuestaComponent } from './components/resultados-encuesta/resultados-encuesta.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,15 @@ import { EncuentraElTesoroComponent } from './components/juegos/encuentra-el-tes
     MayorMenorComponent,
     PreguntadosComponent,
     ResultadosJuegosComponent,
-    EncuentraElTesoroComponent
+    EncuentraElTesoroComponent,
+    EncuestaComponent,
+    ResultadosEncuestaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

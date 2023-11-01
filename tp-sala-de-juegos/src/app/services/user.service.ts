@@ -18,6 +18,7 @@ export class UserService {
   email : string = "";
   nombre : string = "";
   usuarioLogueado;
+  flagLogueado : boolean = false;
 
    registrarUsuario(user :any) : Promise<boolean> {
     return new Promise<boolean>((resolve) =>{
@@ -68,7 +69,7 @@ export class UserService {
     return new Promise<boolean>((resolve) => {
       this.email = email;
       this.fireAuth.signInWithEmailAndPassword(email, password).then(response => {
-
+        this.flagLogueado = true;
         const uIdLogin = response.user?.uid;
         const fechaActual = new Date();
         const documento = this.fireBase.doc("Logs/"+uIdLogin);
@@ -117,6 +118,7 @@ export class UserService {
   }
 
   salir() {
+    this.flagLogueado = false;
     return this.fireAuth.signOut();
   }
 
@@ -193,5 +195,31 @@ export class UserService {
     ref.orderBy("fecha", "asc")
   );
   return registros.valueChanges();
+  }
+
+
+  guardarEncuesta({nombre, apellido, edad, telefono, loMasDificilDeLaApp, juegoQueMasGusto, juegoAgregarOMejorar, calificacionApp}:any)
+  {   
+    const respuesta = {
+      nombre:nombre,
+      apellido:apellido,
+      edad:edad,
+      telefono:telefono,
+      loMasDificilDeLaApp:loMasDificilDeLaApp,
+      juegoQueMasGusto:juegoQueMasGusto,
+      juegoAgregarOMejorar:juegoAgregarOMejorar,
+      calificacionApp:calificacionApp
+    };
+  
+    this.fireBase.collection("respuestasEncuesta").add(respuesta).then((doc)=>{
+      this.notificacion.showSuccess("Se ha registrado tu respuesta","Encuesta Respondida");
+    }).catch((error:any)=>{
+      console.log(error);
+    });;
+  }
+
+  traerResultadosEncuesta(){
+    const resultadosEncuesta = this.fireBase.collection("respuestasEncuesta");
+    return resultadosEncuesta.valueChanges();
   }
 }

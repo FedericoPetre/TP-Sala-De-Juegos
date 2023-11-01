@@ -1,0 +1,133 @@
+<div class="Pantalla">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-start">
+      <h1>Encuesta</h1>
+      <form class="needs-validation" novalidate [formGroup]="form">
+        <table>
+            <tr>
+            <!-- Contenido de la columna izquierda -->
+            <td class="left-column">
+              <div>
+                  <label class="form-label">Nombre</label>
+                  <input type="text" class="form-control" placeholder="Ingrese su nombre aquí" formControlName="nombre">
+                    <!--Errores de Nombre-->
+                    <div *ngIf="form.controls['nombre'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['nombre'].errors['required'] && form.controls['nombre'].touched">
+                        Error, tu nombre es requerido <br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['nombre'].errors['contieneEspacios'] && form.controls['nombre'].touched">
+                        Error, el nombre no puede contener espacios<br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['nombre'].errors['pattern'] && form.controls['nombre'].touched">
+                        Error, el nombre debe estar compuesto por letras
+                      </small>
+                    </div>
+                    <!--Fin errores de Nombre-->  
+                </div>
+          
+                <div>
+                  <label class="form-label">Apellido</label>
+                  <input type="text" class="form-control" placeholder="Ingrese su apellido aquí" formControlName="apellido">
+                    <!--Errores de Apellido-->
+                    <div *ngIf="form.controls['apellido'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['apellido'].errors['required'] && form.controls['apellido'].touched">
+                        Error, tu apellido es requerido<br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['apellido'].errors['contieneEspacios'] && form.controls['apellido'].touched">
+                        Error, el apellido no puede contener espacios<br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['apellido'].errors['pattern'] && form.controls['apellido'].touched">
+                        Error, el apellido debe estar compuesto por letras
+                      </small>
+                    </div>
+                    <!--Fin errores de Apellido--> 
+                </div>
+          
+                <div>
+                  <label class="form-label">Edad</label>
+                  <input type="number" class="form-control" placeholder="Ingrese su edad" formControlName="edad">
+                    <!--Errores de edad-->
+                    <div *ngIf="form.controls['edad'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['edad'].errors['required'] && form.controls['edad'].touched">
+                        Error, su edad es requerida<br>
+                      </small>
+                      <small style="color:red;" *ngIf="(form.controls['edad'].errors['min'] && form.controls['edad'].touched) || form.controls['edad'].errors['max'] && form.controls['edad'].touched">
+                        Error, la edad debe ser entre 18 y 99 años<br>
+                      </small>
+                    </div>
+                    <!--Fin errores de edad--> 
+                </div>
+          
+                <div>
+                  <label class="form-label">Teléfono</label>
+                  <input type="text" class="form-control" placeholder="Ingrese su teléfono" formControlName="telefono">
+                    <!--Errores de teléfono-->
+                    <div *ngIf="form.controls['telefono'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['telefono'].errors['required'] && form.controls['telefono'].touched">
+                        Error, el teléfono es requerido<br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['telefono'].errors['pattern'] && form.controls['telefono'].touched">
+                        Error, el teléfono debe estar compuesto por números. <br>
+                      </small>
+                      <small style="color:red;" *ngIf="form.controls['telefono'].errors['maxlength'] && form.controls['telefono'].touched">
+                        Error, el teléfono debe estar compuesto por 10 caracteres
+                      </small>
+                    </div>
+                    <!--Fin errores de teléfono--> 
+                </div>
+                <div>
+                    <label class="form-label">¿Hubo algo de la app que te resultó difícil de usar o entender?</label>
+                    <input type="text" class="form-control" placeholder="Escribí tu respuesta aquí" formControlName="loMasDificilDeLaApp">
+                    <!--Errores de loMasDificilDeLaApp-->
+                    <div *ngIf="form.controls['loMasDificilDeLaApp'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['loMasDificilDeLaApp'].errors['required'] && form.controls['loMasDificilDeLaApp'].touched">
+                        Error, tu respuesta es requerida
+                      </small>
+                    </div>
+                </div>
+            </td>
+        
+            <!-- Contenido de la columna derecha -->
+            <td class="right-column">
+
+              <div>
+                <label class="form-label">¿Qué juego te gustó más?</label>
+                <div class="form-check">
+                  <input type="radio" id="checkAhorcado" class="form-check-input" name="juegoQueMasGusto" value="Ahorcado" formControlName="juegoQueMasGusto">
+                  <label class="form-check-label" for="checkAhorcado">Ahorcado</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="checkMayorMenor" class="form-check-input" name="juegoQueMasGusto" value="Mayor o Menor" formControlName="juegoQueMasGusto">
+                  <label class="form-check-label" for="checkMayorMenor">Mayor o Menor</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="checkPreguntados" class="form-check-input" name="juegoQueMasGusto" value="Preguntados" formControlName="juegoQueMasGusto">
+                  <label class="form-check-label" for="checkPreguntados">Preguntados</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="checkEncuentraElTesoro" class="form-check-input" name="juegoQueMasGusto" value="Encuentra el Tesoro" formControlName="juegoQueMasGusto">
+                  <label class="form-check-label" for="checkEncuentraElTesoro">Encuentra el Tesoro</label>
+                </div>   
+              </div>
+                
+                <div>
+                    <label class="form-label">¿Hay algún juego que te gustaría que mejoremos o agreguemos?</label>
+                    <input type="text" class="form-control" placeholder="Escribí tu respuesta aquí" formControlName="juegoAgregarOMejorar">
+                    <!--Errores de juegoAgregarOMejorar-->
+                    <div *ngIf="form.controls['juegoAgregarOMejorar'].errors != null">
+                      <small style="color:red;" *ngIf="form.controls['juegoAgregarOMejorar'].errors['required'] && form.controls['juegoAgregarOMejorar'].touched">
+                        Error, tu respuesta es requerida
+                      </small>
+                    </div> 
+                </div>
+      
+              <div>
+                  <label class="form-label">¿Como calificarías la app?</label>
+                  <img *ngFor="let estrella of arrayEstrellas; index as i" (click)="colorearEstrellas(i+1)" [src]="estrella.foto" alt="">
+              </div>
+            </td>
+        </tr>
+        </table><br>
+        <button [disabled]="form.invalid" style="background-color: skyblue;" class="btn btn-lg mt-3 mx-auto text-center" (click)="agregarRespuestas()">Enviar Respuestas</button>
+      </form>
+    </div>
+</div>
